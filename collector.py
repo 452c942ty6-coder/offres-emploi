@@ -71,10 +71,13 @@ def parse_croix_rouge(soup, base):
 def fetch_croix_rouge():
     base = "https://portail.croix-rouge.lu/carrieres/offres"
     jobs = {}
+    seen = set()
     for p in range(1, 13):
         soup = get(f"{base}?page={p}")
-        if not soup.find("a", href=re.compile(r"/carrieres/offres/\d+")):
-            break                                            # plus de page
+        hrefs = {a["href"] for a in soup.find_all("a", href=re.compile(r"/carrieres/offres/\d+"))}
+        if not hrefs or hrefs <= seen:
+            break                  # plus de page (le site répète la dernière)
+        seen |= hrefs
         for j in parse_croix_rouge(soup, base):
             jobs[j["id"]] = j
     return list(jobs.values())
@@ -152,6 +155,10 @@ def fetch_jooble():
             r = requests.post(f"https://jooble.org/api/{key}", timeout=30,
                               json={"keywords": q, "location": "Luxembourg", "page": page})
             print(f"  POST jooble '{q}' p{page} -> {r.status_code}")
+            if r.status_code != 200:
+                # réponse du serveur (sans la clé) pour comprendre le refus
+                print("  réponse:", r.headers.get("content-type", ""), "|",
+                      re.sub(r"\s+", " ", r.text)[:300])
             r.raise_for_status()
             batch = r.json().get("jobs", [])
             if not batch:
