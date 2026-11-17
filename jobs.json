@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T12:41:05.623520+00:00",
+ "updated": "2026-11-17T13:11:19.635466+00:00",
  "jobs": [
   {
    "id": "86f456b9fb41",
@@ -360,6 +360,51 @@
    "source": "Elisabeth",
    "employer": "Elisabeth",
    "first_seen": "2026-11-17T12:41:05.623520+00:00"
+  },
+  {
+   "id": "d773c180909b",
+   "title": "Educateur (m/f/d) - Erzieher (m/w/d) - Luxembourg",
+   "employer": "Elisabeth",
+   "location": "Luxembourg",
+   "url": "https://fr.jooble.org/jdp/3991094775277757528",
+   "source": "Jooble",
+   "first_seen": "2026-11-17T13:11:19.635466+00:00"
+  },
+  {
+   "id": "cde0e0c01167",
+   "title": "Educateur diplômé (m/f) / Contrat déterminé / Temps partiel - Educateur diplômé (m/f) / Befristeter Vertrag / Teilzeit - Luxembourg",
+   "employer": "SERVIOR",
+   "location": "Luxembourg",
+   "url": "https://fr.jooble.org/jdp/5742467552802883775",
+   "source": "Jooble",
+   "first_seen": "2026-11-17T13:11:19.635466+00:00"
+  },
+  {
+   "id": "30646ca62f31",
+   "title": "Educateur diplômé - Diploméiert Erzéier (CCT-SAS) (m/f/x) - Luxembourg",
+   "employer": "Fondation Autisme Luxembourg",
+   "location": "Luxembourg",
+   "url": "https://fr.jooble.org/jdp/6488397281577844745",
+   "source": "Jooble",
+   "first_seen": "2026-11-17T13:11:19.635466+00:00"
+  },
+  {
+   "id": "34bbe1c73f15",
+   "title": "Educateur gradué (m/f/d) - Sozialpädagoge (m/w/d) - Luxembourg",
+   "employer": "Elisabeth",
+   "location": "Luxembourg",
+   "url": "https://fr.jooble.org/jdp/9021531113977252475",
+   "source": "Jooble",
+   "first_seen": "2026-11-17T13:11:19.635466+00:00"
+  },
+  {
+   "id": "58354eec722f",
+   "title": "Educateur (m/f/d) - Erzieher (m/w/d) - Luxembourg",
+   "employer": "Elisabeth",
+   "location": "Luxembourg",
+   "url": "https://fr.jooble.org/jdp/5036535143731631096",
+   "source": "Jooble",
+   "first_seen": "2026-11-17T13:11:19.635466+00:00"
   }
  ]
 }
