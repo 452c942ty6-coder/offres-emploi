@@ -139,6 +139,60 @@ def fetch_caritas():
     return out
 
 
+# ---------- Arcus (tableau d'offres Skeeled) ----------
+def fetch_arcus():
+    url = "https://app.skeeled.com/board/630391210fcd4f4d2f68d11a"
+    soup = get(url)
+    raw = soup.find_all("a", href=re.compile(r"/offer/c/"))
+    print(f"  {len(raw)} liens d'offres bruts" +
+          (f", ex: {raw[0].get_text(' ', strip=True)[:90]!r}" if raw else ""))
+    out = {}
+    for a in raw:
+        title = re.sub(r"\s+", " ", a.get_text(" ", strip=True))
+        if title and ok(title):
+            u = urljoin(url, a["href"])
+            out[jid(u.split("?")[0])] = {"id": jid(u.split("?")[0]), "title": title,
+                                         "location": "", "url": u}
+    return list(out.values())
+
+
+# ---------- Elisabeth ----------
+def fetch_elisabeth():
+    url = "https://www.elisabeth.lu/rejoignez-elisabeth/nos-offres-demploi/"
+    soup = get(url)
+    pat = re.compile(r"/offres-emploi/[^/?#]+/?$")
+    raw = soup.find_all("a", href=pat)
+    print(f"  {len(raw)} liens d'offres bruts" +
+          (f", ex: {raw[0].get_text(' ', strip=True)[:90]!r}" if raw else ""))
+    out = {}
+    for a in raw:
+        u = urljoin(url, a["href"])
+        if jid(u) in out:
+            continue
+        box = a                    # on remonte jusqu'au bloc propre à cette offre
+        while box.parent and len({x["href"] for x in box.parent.find_all("a", href=pat)}) == 1:
+            box = box.parent
+        h = box.find(re.compile(r"^h[1-6]$"))
+        title = h.get_text(" ", strip=True) if h else \
+            re.sub(r"-+", " ", a["href"].rstrip("/").split("/")[-1]).strip().capitalize()
+        m = re.search(r"\b[A-ZÉÈÀ][A-ZÉÈÀ\-]{3,}\b", box.get_text(" ", strip=True))
+        if title and ok(title):
+            out[jid(u)] = {"id": jid(u), "title": title,
+                           "location": m.group(0).title() if m else "", "url": u}
+    return list(out.values())
+
+
+# ---------- HUT (veille : la page annonce « pas d'ouverture de poste ») ----------
+def fetch_hut():
+    url = "https://hut.lu/offres-demploi"
+    text = get(url).get_text(" ", strip=True)
+    if re.search(r"pas d.ouverture", text, re.I):
+        return []
+    mois = datetime.now(timezone.utc).strftime("%Y-%m")
+    return [{"id": jid("hut" + mois), "title": "HUT : une offre semble publiée, à consulter",
+             "location": "", "url": url}]
+
+
 # ---------- Jooble (API officielle, clé dans le secret GitHub JOOBLE_KEY) ----------
 JOOBLE_QUERIES = ["éducateur", "éducateur gradué", "éducateur spécialisé",
                   "éducateur diplômé", "assistant social", "Erzieher"]
@@ -175,6 +229,9 @@ def fetch_jooble():
 
 SOURCES = [
     {"source": "Croix-Rouge", "employer": "Croix-Rouge luxembourgeoise", "fn": fetch_croix_rouge},
+    {"source": "Arcus", "employer": "Arcus asbl", "fn": fetch_arcus},
+    {"source": "Elisabeth", "employer": "Elisabeth", "fn": fetch_elisabeth},
+    {"source": "HUT", "employer": "HUT", "fn": fetch_hut},
     {"source": "Jooble", "employer": "", "fn": fetch_jooble},
     {"source": "Moovijob", "employer": "", "fn": fetch_moovijob},
     {"source": "Caritas", "employer": "Caritas Luxembourg", "fn": fetch_caritas},
