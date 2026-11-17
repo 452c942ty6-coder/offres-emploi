@@ -124,11 +124,16 @@ const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const STAT=["","À voir","Postulé","Entretien","Refusé"];
 let D={jobs:[]};
-fetch("jobs.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
- .catch(()=>({sample:true,jobs:SAMPLE})).then(d=>{D=d;init()});
+function load(){
+ return fetch("jobs.json?t="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()})
+  .catch(()=>({sample:true,jobs:SAMPLE})).then(d=>{D=d;init()});
+}
+load();
 function init(){
+ const cur=src.value;
  const srcs=[...new Set(D.jobs.map(j=>j.source))].sort();
  src.innerHTML='<option value="">Toutes les sources</option>'+srcs.map(s=>`<option>${esc(s)}</option>`).join("");
+ if(srcs.includes(cur))src.value=cur;
  meta.textContent=D.updated?"Mis à jour le "+new Date(D.updated).toLocaleString("fr-FR",{dateStyle:"long",timeStyle:"short"}):"";
  note.innerHTML=D.sample?'<div class="note">Données d’exemple. Les vraies offres apparaîtront quand le fichier jobs.json sera généré par le collecteur.</div>':"";
  render();
