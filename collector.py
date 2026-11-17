@@ -15,7 +15,12 @@ import requests
 from bs4 import BeautifulSoup
 
 OUT = pathlib.Path(__file__).parent / "jobs.json"
-HEADERS = {"User-Agent": "Mozilla/5.0 (veille emploi perso, 1 passage/jour)"}
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 "
+                  "(KHTML, like Gecko) Version/17.0 Safari/605.1.15",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "fr-FR,fr;q=0.9,en;q=0.5",
+}
 KEYWORDS = re.compile(
     r"éducat|educat|erzieh|erzéier|pédagog|pedagog|assistant(e)? social|"
     r"sozial|socio|psycho-?éduc|travailleu|référent|aide-éduc|aide-educ", re.I)
@@ -30,8 +35,13 @@ def jid(url_or_text):
 def get(url):
     time.sleep(1)
     r = requests.get(url, timeout=30, headers=HEADERS)
+    soup = BeautifulSoup(r.text, "html.parser")
+    # Diagnostic : visible dans le log GitHub Actions
+    t = soup.title.get_text(" ", strip=True)[:70] if soup.title else "-"
+    print(f"  GET {url} -> {r.status_code}, {len(r.text)} octets, "
+          f"{len(soup.find_all('a', href=True))} liens, titre: {t}")
     r.raise_for_status()
-    return BeautifulSoup(r.text, "html.parser")
+    return soup
 
 
 def ok(title):
@@ -44,7 +54,10 @@ CR_ENTITIES = (r"Croix-Rouge Luxembourgeoise|Help A\.s\.b\.l\.|"
 
 def parse_croix_rouge(soup, base):
     out = []
-    for a in soup.find_all("a", href=re.compile(r"/carrieres/offres/\d+")):
+    raw = soup.find_all("a", href=re.compile(r"/carrieres/offres/\d+"))
+    print(f"  {len(raw)} liens d'offres bruts" +
+          (f", ex: {raw[0].get_text(' ', strip=True)[:90]!r}" if raw else ""))
+    for a in raw:
         t = a.get_text(" ", strip=True)
         t = re.sub(r"^\S+\s+Réf:\s*\d+\s+", "", t)          # « CDI Réf: 7023 »
         t = re.sub(r"\s+\d{4}-\d{2}-\d{2}$", "", t)         # date de fin
@@ -74,15 +87,21 @@ MJ_CONTRACT = r"(?:CDI|CDD|Intérim|Stage|Alternance|Freelance|Job étudiant)"
 
 def parse_moovijob(soup, base):
     out = []
-    for a in soup.find_all("a", href=re.compile(r"/offres-emploi/[^/]+/[^/]+")):
-        if "Voir l'offre" not in a.get_text(" ", strip=True):
-            continue
+    pat = re.compile(r"/offres-emploi/(?!jobs-luxembourg)[^/?#]+/[^/?#]+$")
+    raw = soup.find_all("a", href=pat)
+    print(f"  {len(raw)} liens d'offres bruts" +
+          (f", ex: {raw[0].get_text(' ', strip=True)[:90]!r}" if raw else ""))
+    for a in raw:
         t = a.get_text(" ", strip=True)
+        if not t:
+            continue
         m = re.match(r"^(.*?) logo (.*?) \1 (.*?) %s\b" % MJ_CONTRACT, t)
         if m:
             employer, title, location = m.group(1), m.group(2), m.group(3)
         else:
             employer, title, location = "", t.replace("Voir l'offre", "").strip(), ""
+        if len(title) > 160:
+            title = title[:160]
         if ok(title):
             url = urljoin(base, a["href"])
             out.append({"id": jid(url), "title": title, "employer": employer,
