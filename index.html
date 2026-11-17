@@ -2,7 +2,7 @@
 <html lang="fr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
-<title>RATIPORTAIL</title>
+<title>Ratiportail</title>
 <style>
 :root{--ink:#2b1d16;--cream:#fff2dc;--cream2:#f1dfc0;--brown:#7b6252;--amber:#e9a23b;--ember:#e0663a}
 *{box-sizing:border-box}
@@ -30,6 +30,9 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible{ou
 .row select{padding:3px 10px;font-size:.85rem;border-width:2px;border-radius:12px;box-shadow:none;background:#fff}
 .note{border:3px dashed #5b5590;border-radius:16px;padding:8px 14px;margin:12px 0;font-size:.9rem;color:#d9d3f0}
 .empty{text-align:center;color:#c9c3ea;padding:32px 0}
+.nope{margin-left:auto;background:none;border:2px solid var(--ink);border-radius:12px;color:var(--brown);font:inherit;font-size:.8rem;padding:1px 10px;cursor:pointer}
+.nope:hover{background:var(--cream2)}
+.card.isno{opacity:.65}
 .fl{animation:fall linear infinite}
 .steam{animation:steam 3s ease-in-out infinite}
 @keyframes fall{from{transform:translateY(0)}to{transform:translateY(150px)}}
@@ -94,14 +97,14 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible{ou
 </g>
 <g class="steam" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M344 138 q-4 -7 0 -13"/><path d="M353 138 q-4 -7 0 -13"/></g>
 </svg>
-<h1>RATIPORTAIL</h1>
+<h1>Ratiportail</h1>
 <p class="tag1">Le raton veille sur les offres pendant que tu te réchauffes</p>
 <div class="mut" id="meta"></div>
 <div class="bar">
  <input id="q" type="search" placeholder="Rechercher un poste, un employeur, une ville" aria-label="Rechercher">
  <select id="src" aria-label="Source"></select>
  <select id="view" aria-label="Affichage">
-  <option value="">Toutes les offres</option><option value="new">Nouvelles</option><option value="fav">Favoris</option>
+  <option value="">Toutes les offres</option><option value="new">Nouvelles</option><option value="fav">Favoris</option><option value="no">Pas intéressé</option>
  </select>
 </div>
 <div id="note"></div>
@@ -115,7 +118,7 @@ const SAMPLE=[
 ];
 const KEY="portail-emploi-v1";
 let S={};try{S=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){}
-S.fav=S.fav||{};S.st=S.st||{};
+S.fav=S.fav||{};S.st=S.st||{};S.no=S.no||{};
 const last=S.last||0;
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -136,20 +139,27 @@ function render(){
  const rows=D.jobs.filter(j=>{
   const isNew=Date.parse(j.first_seen)>last;
   return (!s||j.source===s)&&(v!=="new"||isNew)&&(v!=="fav"||S.fav[j.id])
+   &&(v==="no"?S.no[j.id]:!S.no[j.id])
    &&(!t||(j.title+" "+j.employer+" "+(j.location||"")).toLowerCase().includes(t));
  }).sort((a,b)=>Date.parse(b.first_seen)-Date.parse(a.first_seen));
+ const nNo=D.jobs.filter(j=>S.no[j.id]).length;
+ view.options[3].textContent="Pas intéressé"+(nNo?` (${nNo})`:"");
  list.innerHTML=rows.length?rows.map(j=>{
-  const isNew=Date.parse(j.first_seen)>last,f=S.fav[j.id],st=S.st[j.id]||"";
-  return `<article class="card ${isNew?"isnew":""} ${f?"isfav":""}">
+  const isNew=Date.parse(j.first_seen)>last,f=S.fav[j.id],st=S.st[j.id]||"",no=S.no[j.id];
+  return `<article class="card ${isNew?"isnew":""} ${f?"isfav":""} ${no?"isno":""}">
   <div class="top"><h2><a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a></h2>
   <button class="fav" data-f="${esc(j.id)}" aria-label="Favori" aria-pressed="${!!f}">${f?"★":"☆"}</button></div>
   <div class="row"><span>${esc(j.employer)}</span><span>${esc(j.location||"")}</span><span>${esc(j.source)}</span>
   <span>vue le ${new Date(j.first_seen).toLocaleDateString("fr-FR")}</span>${isNew?'<span class="new">Nouvelle</span>':""}
-  <select data-s="${esc(j.id)}" aria-label="Statut">${STAT.map(x=>`<option value="${x}"${x===st?" selected":""}>${x||"Statut"}</option>`).join("")}</select></div>
+  <select data-s="${esc(j.id)}" aria-label="Statut">${STAT.map(x=>`<option value="${x}"${x===st?" selected":""}>${x||"Statut"}</option>`).join("")}</select>
+  <button class="nope" data-n="${esc(j.id)}">${no?"Remettre":"Pas intéressé"}</button></div>
   </article>`}).join(""):'<div class="empty">Aucune offre pour ces filtres.</div>';
 }
 [q,src,view].forEach(e=>e.addEventListener("input",render));
-list.addEventListener("click",e=>{const b=e.target.closest("[data-f]");if(!b)return;
+list.addEventListener("click",e=>{
+ const n=e.target.closest("[data-n]");
+ if(n){const id=n.dataset.n;S.no[id]?delete S.no[id]:S.no[id]=1;save();render();return}
+ const b=e.target.closest("[data-f]");if(!b)return;
  const id=b.dataset.f;S.fav[id]?delete S.fav[id]:S.fav[id]=1;save();render()});
 list.addEventListener("change",e=>{const s=e.target.dataset.s;if(s){S.st[s]=e.target.value;save()}});
 </script></body></html>
