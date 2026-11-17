@@ -206,7 +206,7 @@ def fetch_jooble():
     for q in JOOBLE_QUERIES:
         for page in (1, 2, 3):
             time.sleep(1)
-            r = requests.post(f"https://jooble.org/api/{key}", timeout=30,
+            r = requests.post(f"https://fr.jooble.org/api/{key}", timeout=30,
                               json={"keywords": q, "location": "Luxembourg", "page": page})
             print(f"  POST jooble '{q}' p{page} -> {r.status_code}")
             if r.status_code != 200:
