@@ -23,7 +23,8 @@ HEADERS = {
 }
 KEYWORDS = re.compile(
     r"éducat|educat|erzieh|erzéier|pédagog|pedagog|assistant(e)? social|"
-    r"sozial|socio|psycho-?éduc|travailleu|référent|aide-éduc|aide-educ", re.I)
+    r"sozial|socio-?éduc|socio-?educ|socio-?péd|socio-?ped|psycho-?éduc|"
+    r"travailleu|référent|aide-éduc|aide-educ", re.I)
 EXCLUDE = re.compile(r"sportif|comptab|informatic|nettoyage|cuisin", re.I)
 MAX_PAGES = 6
 
@@ -70,15 +71,12 @@ def parse_croix_rouge(soup, base):
 def fetch_croix_rouge():
     base = "https://portail.croix-rouge.lu/carrieres/offres"
     jobs = {}
-    for p in range(1, MAX_PAGES + 2):
-        found = parse_croix_rouge(get(f"{base}?page={p}"), base)
-        new = [j for j in found if j["id"] not in jobs]
-        # on continue tant qu'une page apporte des offres ; une page sans
-        # offre sociale peut exister, mais deux d'affilée = fin utile
-        for j in new:
+    for p in range(1, 13):
+        soup = get(f"{base}?page={p}")
+        if not soup.find("a", href=re.compile(r"/carrieres/offres/\d+")):
+            break                                            # plus de page
+        for j in parse_croix_rouge(soup, base):
             jobs[j["id"]] = j
-        if p >= MAX_PAGES:
-            break
     return list(jobs.values())
 
 
@@ -116,6 +114,8 @@ def fetch_moovijob():
         try:
             found = parse_moovijob(get(url), base)
         except requests.HTTPError:
+            if p == 1:
+                raise                                        # site bloqué : FAIL
             break                                            # plus de page
         new = [j for j in found if j["id"] not in jobs]
         if not new:
@@ -136,8 +136,39 @@ def fetch_caritas():
     return out
 
 
+# ---------- Jooble (API officielle, clé dans le secret GitHub JOOBLE_KEY) ----------
+JOOBLE_QUERIES = ["éducateur", "éducateur gradué", "éducateur spécialisé",
+                  "éducateur diplômé", "assistant social", "Erzieher"]
+
+def fetch_jooble():
+    import os
+    key = os.environ.get("JOOBLE_KEY", "").strip()
+    if not key:
+        raise RuntimeError("secret JOOBLE_KEY absent (voir étape Secrets)")
+    jobs = {}
+    for q in JOOBLE_QUERIES:
+        for page in (1, 2, 3):
+            time.sleep(1)
+            r = requests.post(f"https://jooble.org/api/{key}", timeout=30,
+                              json={"keywords": q, "location": "Luxembourg", "page": page})
+            print(f"  POST jooble '{q}' p{page} -> {r.status_code}")
+            r.raise_for_status()
+            batch = r.json().get("jobs", [])
+            if not batch:
+                break
+            for j in batch:
+                title = re.sub(r"</?b>", "", j.get("title", "")).strip()
+                url = j.get("link", "")
+                if url and ok(title):
+                    jobs[jid(url)] = {"id": jid(url), "title": title,
+                                      "employer": j.get("company", ""),
+                                      "location": j.get("location", ""), "url": url}
+    return list(jobs.values())
+
+
 SOURCES = [
     {"source": "Croix-Rouge", "employer": "Croix-Rouge luxembourgeoise", "fn": fetch_croix_rouge},
+    {"source": "Jooble", "employer": "", "fn": fetch_jooble},
     {"source": "Moovijob", "employer": "", "fn": fetch_moovijob},
     {"source": "Caritas", "employer": "Caritas Luxembourg", "fn": fetch_caritas},
 ]
