@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-17T13:11:19.635466+00:00",
+ "updated": "2026-11-18T08:46:19.695422+00:00",
  "jobs": [
+  {
+   "id": "728ba1effe9c",
+   "title": "Éducateur diplômé ou en formation (M/F/D) Centre d'Accueil Norbert Ensch - Primo-accueil MNA - Hesperange - CDD - 30h (7005)",
+   "location": "",
+   "url": "https://portail.croix-rouge.lu/carrieres/offres/7005",
+   "source": "Croix-Rouge",
+   "employer": "Croix-Rouge luxembourgeoise",
+   "first_seen": "2026-11-18T08:46:19.695422+00:00"
+  },
   {
    "id": "86f456b9fb41",
    "title": "Educateur diplômé  (M/F/D) – Maison Relais Ettelbruck - CDI - 30h (7023)",
@@ -24,15 +33,6 @@
    "title": "Éducateur diplômé (M/F/D) Service Migrants & Réfugiés - Luxembourg (Kirchberg) - CDD - 40h (7011)",
    "location": "",
    "url": "https://portail.croix-rouge.lu/carrieres/offres/7011",
-   "source": "Croix-Rouge",
-   "employer": "Croix-Rouge luxembourgeoise",
-   "first_seen": "2026-11-17T12:16:21.973288+00:00"
-  },
-  {
-   "id": "ee778a6ee74b",
-   "title": "Educateur diplômé (M/F/D) Maison Relais - Stadtbredimus - CDD - 30h (6988)",
-   "location": "",
-   "url": "https://portail.croix-rouge.lu/carrieres/offres/6988",
    "source": "Croix-Rouge",
    "employer": "Croix-Rouge luxembourgeoise",
    "first_seen": "2026-11-17T12:16:21.973288+00:00"
@@ -65,28 +65,10 @@
    "first_seen": "2026-11-17T12:16:21.973288+00:00"
   },
   {
-   "id": "a775555516cf",
-   "title": "Éducateur diplômé (M/F/D) Service Migrants & Réfugiés - Bascharage - CDI - 30h (6977)",
-   "location": "",
-   "url": "https://portail.croix-rouge.lu/carrieres/offres/6977",
-   "source": "Croix-Rouge",
-   "employer": "Croix-Rouge luxembourgeoise",
-   "first_seen": "2026-11-17T12:16:21.973288+00:00"
-  },
-  {
    "id": "2197436f8f94",
    "title": "Éducateur diplômé (M/F/D) Service Migrants & Réfugiés - Bascharage - CDD - 40h (6993)",
    "location": "",
    "url": "https://portail.croix-rouge.lu/carrieres/offres/6993",
-   "source": "Croix-Rouge",
-   "employer": "Croix-Rouge luxembourgeoise",
-   "first_seen": "2026-11-17T12:16:21.973288+00:00"
-  },
-  {
-   "id": "550c6a054fb6",
-   "title": "Éducateur diplômé (M/F/D) Service Migrants & Réfugiés - Mersch - CDD - 40h (6955)",
-   "location": "",
-   "url": "https://portail.croix-rouge.lu/carrieres/offres/6955",
    "source": "Croix-Rouge",
    "employer": "Croix-Rouge luxembourgeoise",
    "first_seen": "2026-11-17T12:16:21.973288+00:00"
@@ -387,6 +369,15 @@
    "url": "https://fr.jooble.org/jdp/6488397281577844745",
    "source": "Jooble",
    "first_seen": "2026-11-17T13:11:19.635466+00:00"
+  },
+  {
+   "id": "4ebb06bd772a",
+   "title": "Educatrice(teur) - Beggen (Disponibilité immédiate) - Luxembourg",
+   "employer": "Rockids",
+   "location": "Luxembourg",
+   "url": "https://fr.jooble.org/jdp/-4997028041889020134",
+   "source": "Jooble",
+   "first_seen": "2026-11-18T08:46:19.695422+00:00"
   },
   {
    "id": "34bbe1c73f15",
