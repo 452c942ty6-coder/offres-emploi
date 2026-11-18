@@ -1,6 +1,6 @@
 name: Collecte quotidienne
 on:
-  schedule: [{cron: "0 5 * * *"}]
+  schedule: [{cron: "43 4 * * *"}]
   workflow_dispatch:
 permissions: {contents: write}
 jobs:
