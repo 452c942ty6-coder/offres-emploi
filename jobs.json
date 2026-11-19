@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T08:46:19.695422+00:00",
+ "updated": "2026-11-19T12:53:51.871673+00:00",
  "jobs": [
   {
    "id": "728ba1effe9c",
@@ -272,15 +272,6 @@
    "first_seen": "2026-11-17T12:41:05.623520+00:00"
   },
   {
-   "id": "fc58e9b56ad6",
-   "title": "NEW Educateur diplômé / Educateur gradué (M/W/NB) - Maison Relais Simmer Septfontaines -",
-   "location": "",
-   "url": "https://app.skeeled.com/offer/c/6a733e0161408ca7e49446a5?show_description=true&language=fr",
-   "source": "Arcus",
-   "employer": "Arcus asbl",
-   "first_seen": "2026-11-17T12:41:05.623520+00:00"
-  },
-  {
    "id": "077ad306caff",
    "title": "Educateur (m/f/d) 20-25 hrs/sem CDD",
    "location": "Weiswampach",
@@ -353,15 +344,6 @@
    "first_seen": "2026-11-17T13:11:19.635466+00:00"
   },
   {
-   "id": "cde0e0c01167",
-   "title": "Educateur diplômé (m/f) / Contrat déterminé / Temps partiel - Educateur diplômé (m/f) / Befristeter Vertrag / Teilzeit - Luxembourg",
-   "employer": "SERVIOR",
-   "location": "Luxembourg",
-   "url": "https://fr.jooble.org/jdp/5742467552802883775",
-   "source": "Jooble",
-   "first_seen": "2026-11-17T13:11:19.635466+00:00"
-  },
-  {
    "id": "30646ca62f31",
    "title": "Educateur diplômé - Diploméiert Erzéier (CCT-SAS) (m/f/x) - Luxembourg",
    "employer": "Fondation Autisme Luxembourg",
@@ -389,13 +371,13 @@
    "first_seen": "2026-11-17T13:11:19.635466+00:00"
   },
   {
-   "id": "58354eec722f",
+   "id": "2ca5d4e11053",
    "title": "Educateur (m/f/d) - Erzieher (m/w/d) - Luxembourg",
    "employer": "Elisabeth",
    "location": "Luxembourg",
-   "url": "https://fr.jooble.org/jdp/5036535143731631096",
+   "url": "https://fr.jooble.org/jdp/-3699312294158837495",
    "source": "Jooble",
-   "first_seen": "2026-11-17T13:11:19.635466+00:00"
+   "first_seen": "2026-11-19T12:53:51.871673+00:00"
   }
  ]
 }
