@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T13:54:45.254488+00:00",
+ "updated": "2026-11-20T13:36:52.094378+00:00",
  "jobs": [
   {
    "id": "728ba1effe9c",
@@ -218,6 +218,15 @@
    "first_seen": "2026-11-17T12:41:05.623520+00:00"
   },
   {
+   "id": "9e26db9e985b",
+   "title": "NEW Educateur diplômé (M/W/NB) - Maison Relais Buerschent Bourscheid -",
+   "location": "",
+   "url": "https://app.skeeled.com/offer/c/6b0024e39fa20a6a1f0cc5a9?show_description=true&language=fr",
+   "source": "Arcus",
+   "employer": "Arcus asbl",
+   "first_seen": "2026-11-20T13:36:52.094378+00:00"
+  },
+  {
    "id": "c5674e4519cd",
    "title": "NEW Educateur diplômé - Maison Relais Nidderaanwen (M/W/NB) Oberanven -",
    "location": "",
@@ -245,22 +254,13 @@
    "first_seen": "2026-11-17T12:41:05.623520+00:00"
   },
   {
-   "id": "6231d41b2bb4",
-   "title": "NEW Educateur diplômé (M/W/NB) - Wunngrupp Taipa (Jonglënster) Jonglënster -",
+   "id": "1f50ff2b4ea7",
+   "title": "NEW Educateur diplômé (M/W/NB) - Maison Relais Tandel Tandel -",
    "location": "",
-   "url": "https://app.skeeled.com/offer/c/6af466ed87e59f13b3526299?show_description=true&language=fr",
+   "url": "https://app.skeeled.com/offer/c/6aff0bd02d613713ddc2d458?show_description=true&language=fr",
    "source": "Arcus",
    "employer": "Arcus asbl",
-   "first_seen": "2026-11-17T12:41:05.623520+00:00"
-  },
-  {
-   "id": "c4efc9ea2d9b",
-   "title": "NEW Educateur diplômé (M/W/NB) – Wunngrupp Aurora (Mäerzeg) Mertzig -",
-   "location": "",
-   "url": "https://app.skeeled.com/offer/c/6af2f2899fa20a6a1fb318dc?show_description=true&language=fr",
-   "source": "Arcus",
-   "employer": "Arcus asbl",
-   "first_seen": "2026-11-17T12:41:05.623520+00:00"
+   "first_seen": "2026-11-20T13:36:52.094378+00:00"
   },
   {
    "id": "077ad306caff",
