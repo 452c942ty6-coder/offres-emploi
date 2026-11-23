@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-23T15:22:44.171513+00:00",
+ "updated": "2026-11-23T18:27:04.889578+00:00",
  "jobs": [
+  {
+   "id": "4db39701b19b",
+   "title": "Educateur diplômé (M/F/D) Maison Relais - Koerich - CDI - 30h (6969)",
+   "location": "",
+   "url": "https://portail.croix-rouge.lu/carrieres/offres/6969",
+   "source": "Croix-Rouge",
+   "employer": "Croix-Rouge luxembourgeoise",
+   "first_seen": "2026-11-17T12:16:21.973288+00:00"
+  },
   {
    "id": "728ba1effe9c",
    "title": "Éducateur diplômé ou en formation (M/F/D) Centre d'Accueil Norbert Ensch - Primo-accueil MNA - Hesperange - CDD - 30h (7005)",
@@ -47,15 +56,6 @@
    "first_seen": "2026-11-17T12:16:21.973288+00:00"
   },
   {
-   "id": "9ba708d5128c",
-   "title": "Educateur Diplomé (M/F/D) Naturcrèche Dippach - CDI - 40h (7009)",
-   "location": "",
-   "url": "https://portail.croix-rouge.lu/carrieres/offres/7009",
-   "source": "Croix-Rouge",
-   "employer": "Croix-Rouge luxembourgeoise",
-   "first_seen": "2026-11-17T12:16:21.973288+00:00"
-  },
-  {
    "id": "b212127b6b82",
    "title": "Éducateur gradué (M/F/D) Centre National pour Victimes de Violences - Luxembourg - CDD - 20h (6989)",
    "location": "",
@@ -69,15 +69,6 @@
    "title": "Éducateur diplômé (M/F/D) Service Migrants & Réfugiés - Bascharage - CDD - 40h (6993)",
    "location": "",
    "url": "https://portail.croix-rouge.lu/carrieres/offres/6993",
-   "source": "Croix-Rouge",
-   "employer": "Croix-Rouge luxembourgeoise",
-   "first_seen": "2026-11-17T12:16:21.973288+00:00"
-  },
-  {
-   "id": "4db39701b19b",
-   "title": "Educateur diplômé (M/F/D) Maison Relais - Koerich - CDI - 30h (6969)",
-   "location": "",
-   "url": "https://portail.croix-rouge.lu/carrieres/offres/6969",
    "source": "Croix-Rouge",
    "employer": "Croix-Rouge luxembourgeoise",
    "first_seen": "2026-11-17T12:16:21.973288+00:00"
@@ -362,13 +353,13 @@
    "first_seen": "2026-11-17T13:11:19.635466+00:00"
   },
   {
-   "id": "2ca5d4e11053",
+   "id": "58354eec722f",
    "title": "Educateur (m/f/d) - Erzieher (m/w/d) - Luxembourg",
    "employer": "Elisabeth",
    "location": "Luxembourg",
-   "url": "https://fr.jooble.org/jdp/-3699312294158837495",
+   "url": "https://fr.jooble.org/jdp/5036535143731631096",
    "source": "Jooble",
-   "first_seen": "2026-11-23T15:22:44.171513+00:00"
+   "first_seen": "2026-11-23T18:27:04.889578+00:00"
   }
  ]
 }
