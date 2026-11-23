@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T22:02:55.584611+00:00",
+ "updated": "2026-11-23T15:22:44.171513+00:00",
  "jobs": [
   {
    "id": "728ba1effe9c",
@@ -218,6 +218,15 @@
    "first_seen": "2026-11-17T12:41:05.623520+00:00"
   },
   {
+   "id": "63b11d2aba9d",
+   "title": "NEW Conseiller pédagogique (M/W/NB) - agence dageselteren (Belair) Luxembourg -",
+   "location": "",
+   "url": "https://app.skeeled.com/offer/c/6b04121c87e59f13b3aee2ab?show_description=true&language=fr",
+   "source": "Arcus",
+   "employer": "Arcus asbl",
+   "first_seen": "2026-11-23T15:22:44.171513+00:00"
+  },
+  {
    "id": "9e26db9e985b",
    "title": "NEW Educateur diplômé (M/W/NB) - Maison Relais Buerschent Bourscheid -",
    "location": "",
@@ -252,15 +261,6 @@
    "source": "Arcus",
    "employer": "Arcus asbl",
    "first_seen": "2026-11-17T12:41:05.623520+00:00"
-  },
-  {
-   "id": "1f50ff2b4ea7",
-   "title": "NEW Educateur diplômé (M/W/NB) - Maison Relais Tandel Tandel -",
-   "location": "",
-   "url": "https://app.skeeled.com/offer/c/6aff0bd02d613713ddc2d458?show_description=true&language=fr",
-   "source": "Arcus",
-   "employer": "Arcus asbl",
-   "first_seen": "2026-11-20T13:36:52.094378+00:00"
   },
   {
    "id": "077ad306caff",
@@ -317,15 +317,6 @@
    "first_seen": "2026-11-17T12:41:05.623520+00:00"
   },
   {
-   "id": "f26db7415586",
-   "title": "Educateur (m/f/d) 30 hrs/sem CDI",
-   "location": "Moutfort",
-   "url": "https://www.elisabeth.lu/offres-emploi/educateur-m-f-d-30-hrs-sem-cdi/",
-   "source": "Elisabeth",
-   "employer": "Elisabeth",
-   "first_seen": "2026-11-17T12:41:05.623520+00:00"
-  },
-  {
    "id": "d773c180909b",
    "title": "Educateur (m/f/d) - Erzieher (m/w/d) - Luxembourg",
    "employer": "Elisabeth",
@@ -371,13 +362,13 @@
    "first_seen": "2026-11-17T13:11:19.635466+00:00"
   },
   {
-   "id": "58354eec722f",
+   "id": "2ca5d4e11053",
    "title": "Educateur (m/f/d) - Erzieher (m/w/d) - Luxembourg",
    "employer": "Elisabeth",
    "location": "Luxembourg",
-   "url": "https://fr.jooble.org/jdp/5036535143731631096",
+   "url": "https://fr.jooble.org/jdp/-3699312294158837495",
    "source": "Jooble",
-   "first_seen": "2026-11-22T22:02:55.584611+00:00"
+   "first_seen": "2026-11-23T15:22:44.171513+00:00"
   }
  ]
 }
