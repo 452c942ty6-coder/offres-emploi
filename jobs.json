@@ -1,6 +1,33 @@
 {
- "updated": "2026-11-23T19:32:11.018031+00:00",
+ "updated": "2026-11-24T15:16:44.844747+00:00",
  "jobs": [
+  {
+   "id": "d4a6976642e5",
+   "title": "Assistant socio-éducatif (M/F/D) Maison Relais Vianden - CDD - 18h (7030)",
+   "location": "",
+   "url": "https://portail.croix-rouge.lu/carrieres/offres/7030",
+   "source": "Croix-Rouge",
+   "employer": "Croix-Rouge luxembourgeoise",
+   "first_seen": "2026-11-24T15:16:44.844747+00:00"
+  },
+  {
+   "id": "4b57d5250570",
+   "title": "Educateur diplômé (M/F/D) Maison Relais Junglinster International School - CDI - 20h (7040)",
+   "location": "",
+   "url": "https://portail.croix-rouge.lu/carrieres/offres/7040",
+   "source": "Croix-Rouge",
+   "employer": "Croix-Rouge luxembourgeoise",
+   "first_seen": "2026-11-24T15:16:44.844747+00:00"
+  },
+  {
+   "id": "80cadeb49111",
+   "title": "Coordinateur qualité (M/F/D) Education non-formelle - Bertrange - CDI - 30h (7042)",
+   "location": "",
+   "url": "https://portail.croix-rouge.lu/carrieres/offres/7042",
+   "source": "Croix-Rouge",
+   "employer": "Croix-Rouge luxembourgeoise",
+   "first_seen": "2026-11-24T15:16:44.844747+00:00"
+  },
   {
    "id": "4db39701b19b",
    "title": "Educateur diplômé (M/F/D) Maison Relais - Koerich - CDI - 30h (6969)",
@@ -200,15 +227,6 @@
    "first_seen": "2026-11-17T12:25:30.738393+00:00"
   },
   {
-   "id": "7982bc8f5452",
-   "title": "NEW Aide socio-éducatif / Agent socio-pédagogique/ Aide socio-familiale (M/F/NB) – Service Comibus (région NORD) Temps partiel Luxembourg - Luxembourg",
-   "location": "",
-   "url": "https://app.skeeled.com/offer/c/6a324dbe8b47f77544c51c9a?show_description=true&language=fr",
-   "source": "Arcus",
-   "employer": "Arcus asbl",
-   "first_seen": "2026-11-17T12:41:05.623520+00:00"
-  },
-  {
    "id": "63b11d2aba9d",
    "title": "NEW Conseiller pédagogique (M/W/NB) - agence dageselteren (Belair) Luxembourg -",
    "location": "",
@@ -252,6 +270,15 @@
    "source": "Arcus",
    "employer": "Arcus asbl",
    "first_seen": "2026-11-17T12:41:05.623520+00:00"
+  },
+  {
+   "id": "1f50ff2b4ea7",
+   "title": "NEW Educateur diplômé (M/W/NB) - Maison Relais Tandel Tandel -",
+   "location": "",
+   "url": "https://app.skeeled.com/offer/c/6aff0bd02d613713ddc2d458?show_description=true&language=fr",
+   "source": "Arcus",
+   "employer": "Arcus asbl",
+   "first_seen": "2026-11-24T15:16:44.844747+00:00"
   },
   {
    "id": "077ad306caff",
@@ -306,60 +333,6 @@
    "source": "Elisabeth",
    "employer": "Elisabeth",
    "first_seen": "2026-11-17T12:41:05.623520+00:00"
-  },
-  {
-   "id": "d773c180909b",
-   "title": "Educateur (m/f/d) - Erzieher (m/w/d) - Luxembourg",
-   "employer": "Elisabeth",
-   "location": "Luxembourg",
-   "url": "https://fr.jooble.org/jdp/3991094775277757528",
-   "source": "Jooble",
-   "first_seen": "2026-11-17T13:11:19.635466+00:00"
-  },
-  {
-   "id": "7c4167d9100c",
-   "title": "Educateur diplômé (m/f) / Contrat indéterminé / Temps partiel - Educateur diplômé (m/f) / Unbefristeter Vertrag / Teilzeit - Luxembourg",
-   "employer": "SERVIOR",
-   "location": "Luxembourg",
-   "url": "https://fr.jooble.org/jdp/-8638186669140002398",
-   "source": "Jooble",
-   "first_seen": "2026-11-21T13:00:27.827535+00:00"
-  },
-  {
-   "id": "30646ca62f31",
-   "title": "Educateur diplômé - Diploméiert Erzéier (CCT-SAS) (m/f/x) - Luxembourg",
-   "employer": "Fondation Autisme Luxembourg",
-   "location": "Luxembourg",
-   "url": "https://fr.jooble.org/jdp/6488397281577844745",
-   "source": "Jooble",
-   "first_seen": "2026-11-17T13:11:19.635466+00:00"
-  },
-  {
-   "id": "4ebb06bd772a",
-   "title": "Educatrice(teur) - Beggen (Disponibilité immédiate) - Luxembourg",
-   "employer": "Rockids",
-   "location": "Luxembourg",
-   "url": "https://fr.jooble.org/jdp/-4997028041889020134",
-   "source": "Jooble",
-   "first_seen": "2026-11-18T08:46:19.695422+00:00"
-  },
-  {
-   "id": "34bbe1c73f15",
-   "title": "Educateur gradué (m/f/d) - Sozialpädagoge (m/w/d) - Luxembourg",
-   "employer": "Elisabeth",
-   "location": "Luxembourg",
-   "url": "https://fr.jooble.org/jdp/9021531113977252475",
-   "source": "Jooble",
-   "first_seen": "2026-11-17T13:11:19.635466+00:00"
-  },
-  {
-   "id": "58354eec722f",
-   "title": "Educateur (m/f/d) - Erzieher (m/w/d) - Luxembourg",
-   "employer": "Elisabeth",
-   "location": "Luxembourg",
-   "url": "https://fr.jooble.org/jdp/5036535143731631096",
-   "source": "Jooble",
-   "first_seen": "2026-11-23T18:27:04.889578+00:00"
   }
  ]
 }
