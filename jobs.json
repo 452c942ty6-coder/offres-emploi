@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-25T14:57:27.868092+00:00",
+ "updated": "2026-11-25T17:24:06.271486+00:00",
  "jobs": [
+  {
+   "id": "5557b2f28c88",
+   "title": "Éducateur diplômé (M/F/D) Service Migrants & Réfugiés - Luxembourg (Kirchberg) - CDD - 40h (7046)",
+   "location": "",
+   "url": "https://portail.croix-rouge.lu/carrieres/offres/7046",
+   "source": "Croix-Rouge",
+   "employer": "Croix-Rouge luxembourgeoise",
+   "first_seen": "2026-11-25T17:24:06.271486+00:00"
+  },
   {
    "id": "d4a6976642e5",
    "title": "Assistant socio-éducatif (M/F/D) Maison Relais Vianden - CDD - 18h (7030)",
@@ -335,6 +344,15 @@
    "first_seen": "2026-11-24T17:55:30.705235+00:00"
   },
   {
+   "id": "51bfe79f3626",
+   "title": "Agile Manager Senior - Refonte du Référentiel Client",
+   "employer": "Cat-Amania",
+   "location": "Luxembourg",
+   "url": "https://fr.jooble.org/jdp/8260461817621276363",
+   "source": "Jooble",
+   "first_seen": "2026-11-25T17:24:06.271486+00:00"
+  },
+  {
    "id": "34bbe1c73f15",
    "title": "Educateur gradué (m/f/d) - Sozialpädagoge (m/w/d) - Luxembourg",
    "employer": "Elisabeth",
@@ -344,13 +362,13 @@
    "first_seen": "2026-11-24T17:55:30.705235+00:00"
   },
   {
-   "id": "2ca5d4e11053",
+   "id": "58354eec722f",
    "title": "Educateur (m/f/d) - Erzieher (m/w/d) - Luxembourg",
    "employer": "Elisabeth",
    "location": "Luxembourg",
-   "url": "https://fr.jooble.org/jdp/-3699312294158837495",
+   "url": "https://fr.jooble.org/jdp/5036535143731631096",
    "source": "Jooble",
-   "first_seen": "2026-11-25T14:57:27.868092+00:00"
+   "first_seen": "2026-11-25T17:24:06.271486+00:00"
   }
  ]
 }
