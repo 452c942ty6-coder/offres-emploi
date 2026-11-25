@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T19:07:45.789876+00:00",
+ "updated": "2026-11-25T14:57:27.868092+00:00",
  "jobs": [
   {
    "id": "d4a6976642e5",
@@ -27,15 +27,6 @@
    "source": "Croix-Rouge",
    "employer": "Croix-Rouge luxembourgeoise",
    "first_seen": "2026-11-24T15:16:44.844747+00:00"
-  },
-  {
-   "id": "4db39701b19b",
-   "title": "Educateur diplômé (M/F/D) Maison Relais - Koerich - CDI - 30h (6969)",
-   "location": "",
-   "url": "https://portail.croix-rouge.lu/carrieres/offres/6969",
-   "source": "Croix-Rouge",
-   "employer": "Croix-Rouge luxembourgeoise",
-   "first_seen": "2026-11-17T12:16:21.973288+00:00"
   },
   {
    "id": "728ba1effe9c",
@@ -128,15 +119,6 @@
    "first_seen": "2026-11-17T12:16:21.973288+00:00"
   },
   {
-   "id": "a047334b53a4",
-   "title": "Éducateur diplômé (M/F/D) Service Migrants & Réfugiés - équipe mobile - CDD - 20h (6954)",
-   "location": "",
-   "url": "https://portail.croix-rouge.lu/carrieres/offres/6954",
-   "source": "Croix-Rouge",
-   "employer": "Croix-Rouge luxembourgeoise",
-   "first_seen": "2026-11-17T12:16:21.973288+00:00"
-  },
-  {
    "id": "60c6e270b74f",
    "title": "Educateur diplômé (M/F/D) Centre d'Accueil Norbert Ensch - Maison Henri Dunant - Hellange - CDI - 35h (6936)",
    "location": "",
@@ -186,15 +168,6 @@
    "title": "Educateur diplômé (M/F/D) Maison Relais - Strassen Blummewiss - CDI - 30h (6873)",
    "location": "",
    "url": "https://portail.croix-rouge.lu/carrieres/offres/6873",
-   "source": "Croix-Rouge",
-   "employer": "Croix-Rouge luxembourgeoise",
-   "first_seen": "2026-11-17T12:16:21.973288+00:00"
-  },
-  {
-   "id": "0da8558eab63",
-   "title": "Educateur diplômé (M/F/D) Maison des Jeunes de Koerich - CDI - 30h (6869)",
-   "location": "",
-   "url": "https://portail.croix-rouge.lu/carrieres/offres/6869",
    "source": "Croix-Rouge",
    "employer": "Croix-Rouge luxembourgeoise",
    "first_seen": "2026-11-17T12:16:21.973288+00:00"
@@ -371,13 +344,13 @@
    "first_seen": "2026-11-24T17:55:30.705235+00:00"
   },
   {
-   "id": "58354eec722f",
+   "id": "2ca5d4e11053",
    "title": "Educateur (m/f/d) - Erzieher (m/w/d) - Luxembourg",
    "employer": "Elisabeth",
    "location": "Luxembourg",
-   "url": "https://fr.jooble.org/jdp/5036535143731631096",
+   "url": "https://fr.jooble.org/jdp/-3699312294158837495",
    "source": "Jooble",
-   "first_seen": "2026-11-24T17:55:30.705235+00:00"
+   "first_seen": "2026-11-25T14:57:27.868092+00:00"
   }
  ]
 }
