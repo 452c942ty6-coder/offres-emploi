@@ -2,8 +2,6 @@ name: Collecte quotidienne
 on:
   schedule:
     - cron: "43 4 * * *"
-    - cron: "23 6 * * *"
-    - cron: "53 7 * * *"
   workflow_dispatch:
 permissions:
   contents: write
