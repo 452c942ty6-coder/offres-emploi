@@ -1,6 +1,15 @@
 {
- "updated": "2026-11-26T14:28:37.723735+00:00",
+ "updated": "2026-11-27T14:21:13.773839+00:00",
  "jobs": [
+  {
+   "id": "a18b00187328",
+   "title": "Éducateur diplômé (M/F/D) – Crèche- Heffingen - CDD - 30h (6968)",
+   "location": "",
+   "url": "https://portail.croix-rouge.lu/carrieres/offres/6968",
+   "source": "Croix-Rouge",
+   "employer": "Croix-Rouge luxembourgeoise",
+   "first_seen": "2026-11-17T12:16:21.973288+00:00"
+  },
   {
    "id": "5557b2f28c88",
    "title": "Éducateur diplômé (M/F/D) Service Migrants & Réfugiés - Luxembourg (Kirchberg) - CDD - 40h (7046)",
@@ -114,15 +123,6 @@
    "title": "Éducateurs diplômés (M/F/D) Service TACT - Luxembourg-ville - CDI/CDD - 40h (6992)",
    "location": "",
    "url": "https://portail.croix-rouge.lu/carrieres/offres/6992",
-   "source": "Croix-Rouge",
-   "employer": "Croix-Rouge luxembourgeoise",
-   "first_seen": "2026-11-17T12:16:21.973288+00:00"
-  },
-  {
-   "id": "a18b00187328",
-   "title": "Éducateur diplômé (M/F/D) – Crèche- Heffingen - CDD - 30h (6968)",
-   "location": "",
-   "url": "https://portail.croix-rouge.lu/carrieres/offres/6968",
    "source": "Croix-Rouge",
    "employer": "Croix-Rouge luxembourgeoise",
    "first_seen": "2026-11-17T12:16:21.973288+00:00"
@@ -254,6 +254,24 @@
    "first_seen": "2026-11-17T12:41:05.623520+00:00"
   },
   {
+   "id": "1f50ff2b4ea7",
+   "title": "NEW Educateur diplômé (M/W/NB) - Maison Relais Tandel Tandel -",
+   "location": "",
+   "url": "https://app.skeeled.com/offer/c/6aff0bd02d613713ddc2d458?show_description=true&language=fr",
+   "source": "Arcus",
+   "employer": "Arcus asbl",
+   "first_seen": "2026-11-27T14:21:13.773839+00:00"
+  },
+  {
+   "id": "6231d41b2bb4",
+   "title": "NEW Educateur diplômé (M/W/NB) - Wunngrupp Taipa (Jonglënster) Jonglënster -",
+   "location": "",
+   "url": "https://app.skeeled.com/offer/c/6af466ed87e59f13b3526299?show_description=true&language=fr",
+   "source": "Arcus",
+   "employer": "Arcus asbl",
+   "first_seen": "2026-11-27T14:21:13.773839+00:00"
+  },
+  {
    "id": "4816f7552582",
    "title": "Educateur – Groupe de vie (m/f/d) 20-32 hrs/sem CDI",
    "location": "Mondorf-Les-Bains",
@@ -317,6 +335,15 @@
    "first_seen": "2026-11-17T12:41:05.623520+00:00"
   },
   {
+   "id": "a8beae67bd18",
+   "title": "HUT : une offre semble publiée, à consulter",
+   "location": "",
+   "url": "https://hut.lu/offres-demploi",
+   "source": "HUT",
+   "employer": "HUT",
+   "first_seen": "2026-11-27T14:21:13.773839+00:00"
+  },
+  {
    "id": "d773c180909b",
    "title": "Educateur (m/f/d) - Erzieher (m/w/d) - Luxembourg",
    "employer": "Elisabeth",
@@ -342,6 +369,15 @@
    "url": "https://fr.jooble.org/jdp/-4997028041889020134",
    "source": "Jooble",
    "first_seen": "2026-11-24T17:55:30.705235+00:00"
+  },
+  {
+   "id": "3bf29c44a845",
+   "title": "Educateur de Jeunes Enfants H/F",
+   "employer": "LES PETITS CHAPERONS ROUGES",
+   "location": "Luxembourg",
+   "url": "https://fr.jooble.org/jdp/1025203159122047688",
+   "source": "Jooble",
+   "first_seen": "2026-11-27T14:21:13.773839+00:00"
   },
   {
    "id": "34bbe1c73f15",
