@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T14:21:13.773839+00:00",
+ "updated": "2026-11-28T13:36:48.792358+00:00",
  "jobs": [
   {
    "id": "a18b00187328",
@@ -245,15 +245,6 @@
    "first_seen": "2026-11-17T12:41:05.623520+00:00"
   },
   {
-   "id": "60b9770221f2",
-   "title": "NEW Educateur diplômé (M/W/NB) - Maison Relais Nidderfeelen Niederfeulen -",
-   "location": "",
-   "url": "https://app.skeeled.com/offer/c/6ad1d9398606a69597a573c3?show_description=true&language=fr",
-   "source": "Arcus",
-   "employer": "Arcus asbl",
-   "first_seen": "2026-11-17T12:41:05.623520+00:00"
-  },
-  {
    "id": "1f50ff2b4ea7",
    "title": "NEW Educateur diplômé (M/W/NB) - Maison Relais Tandel Tandel -",
    "location": "",
@@ -270,6 +261,15 @@
    "source": "Arcus",
    "employer": "Arcus asbl",
    "first_seen": "2026-11-27T14:21:13.773839+00:00"
+  },
+  {
+   "id": "9f49080072dd",
+   "title": "NEW Educateur diplômé (M/W/NB) - Wunngruppen am Osten Gréiwemaacher -",
+   "location": "",
+   "url": "https://app.skeeled.com/offer/c/6afeffe23ee2fad123cb53a7?show_description=true&language=fr",
+   "source": "Arcus",
+   "employer": "Arcus asbl",
+   "first_seen": "2026-11-28T13:36:48.792358+00:00"
   },
   {
    "id": "4816f7552582",
@@ -353,6 +353,15 @@
    "first_seen": "2026-11-24T17:55:30.705235+00:00"
   },
   {
+   "id": "703234d456eb",
+   "title": "Educateur - Groupe de vie (m/f/d) - Erzieher Wohnbereich (m/w/d) - Luxembourg",
+   "employer": "Elisabeth",
+   "location": "Luxembourg",
+   "url": "https://fr.jooble.org/jdp/-1514882888003358035",
+   "source": "Jooble",
+   "first_seen": "2026-11-28T13:36:48.792358+00:00"
+  },
+  {
    "id": "30646ca62f31",
    "title": "Educateur diplômé - Diploméiert Erzéier (CCT-SAS) (m/f/x) - Luxembourg",
    "employer": "Fondation Autisme Luxembourg",
@@ -369,15 +378,6 @@
    "url": "https://fr.jooble.org/jdp/-4997028041889020134",
    "source": "Jooble",
    "first_seen": "2026-11-24T17:55:30.705235+00:00"
-  },
-  {
-   "id": "3bf29c44a845",
-   "title": "Educateur de Jeunes Enfants H/F",
-   "employer": "LES PETITS CHAPERONS ROUGES",
-   "location": "Luxembourg",
-   "url": "https://fr.jooble.org/jdp/1025203159122047688",
-   "source": "Jooble",
-   "first_seen": "2026-11-27T14:21:13.773839+00:00"
   },
   {
    "id": "34bbe1c73f15",
